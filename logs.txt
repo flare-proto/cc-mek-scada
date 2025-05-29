@@ -1,0 +1,41 @@
+2025-05-29 15:56:52 [INF] ========================================
+2025-05-29 15:56:52 [INF] BOOTING supervisor.startup v1.7.0
+2025-05-29 15:56:52 [INF] ========================================
+2025-05-29 15:56:52 [WRN] PPM: mount_all() -> no devices found
+2025-05-29 15:56:52 [FTL] no wireless modem on startup
+2025-05-29 15:57:06 [INF] ========================================
+2025-05-29 15:57:06 [INF] BOOTING supervisor.startup v1.7.0
+2025-05-29 15:57:06 [INF] ========================================
+2025-05-29 15:57:06 [WRN] PPM: mount_all() -> no devices found
+2025-05-29 15:57:06 [ERR] front panel GUI render failed with error ...isor/panel/front_panel.lua:94: 'for' limit must be a number
+2025-05-29 15:57:07 [INF] =====> FATAL SOFTWARE FAULT <=====
+2025-05-29 15:57:07 [FTL] ...sor/session/svsessions.lua:655: attempt to index field 'facility' (a nil value)
+2025-05-29 15:57:07 [INF] ----------------------------------
+2025-05-29 15:57:07 [INF] RUNTIME:          ComputerCraft 1.112.0 (CraftOS-PC v2.8.3)
+2025-05-29 15:57:07 [INF] LUA VERSION:      Lua 5.2
+2025-05-29 15:57:07 [INF] APPLICATION:      supervisor
+2025-05-29 15:57:07 [INF] FIRMWARE VERSION: v1.7.0
+2025-05-29 15:57:07 [INF] COMMS VERSION:    3.0.6
+2025-05-29 15:57:07 [INF] GRAPHICS VERSION: 2.4.7
+2025-05-29 15:57:07 [INF] LOCKBOX VERSION:  1.1
+2025-05-29 15:57:07 [INF] ----------------------------------
+2025-05-29 15:57:07 [INF] --- begin debug trace ---
+stack traceback:
+	/scada-common/crash.lua:122: in function '__index'
+	...sor/session/svsessions.lua:655: in function 'iterate_all'
+	/test/startup.lua:111: in function </test/startup.lua:57>
+	[C]: in function 'xpcall'
+	/test/startup.lua:145: in main chunk
+2025-05-29 15:57:07 [INF] --- end debug trace ---
+2025-05-29 15:59:20 [INF] ========================================
+2025-05-29 15:59:20 [INF] BOOTING supervisor.startup v1.7.0
+2025-05-29 15:59:20 [INF] ========================================
+2025-05-29 15:59:20 [WRN] PPM: mount_all() -> no devices found
+2025-05-29 16:01:48 [INF] ========================================
+2025-05-29 16:01:48 [INF] BOOTING supervisor.startup v1.7.0
+2025-05-29 16:01:48 [INF] ========================================
+2025-05-29 16:01:48 [WRN] PPM: mount_all() -> no devices found
+2025-05-29 16:02:11 [INF] ========================================
+2025-05-29 16:02:11 [INF] BOOTING supervisor.startup v1.7.0
+2025-05-29 16:02:11 [INF] ========================================
+2025-05-29 16:02:11 [WRN] PPM: mount_all() -> no devices found

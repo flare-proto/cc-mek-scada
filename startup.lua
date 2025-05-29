@@ -5,9 +5,9 @@ print("BOOT> SCANNING FOR APPLICATIONS...")
 
 local exit_code
 
-if fs.exists("reactor-plc/startup.lua") then
-    print("BOOT> EXEC REACTOR PLC STARTUP")
-    exit_code = shell.execute("reactor-plc/startup")
+if fs.exists("test/startup.lua") then
+    print("BOOT> EXEC Test STARTUP")
+    exit_code = shell.execute("test/startup")
 elseif fs.exists("rtu/startup.lua") then
     print("BOOT> EXEC RTU STARTUP")
     exit_code = shell.execute("rtu/startup")
