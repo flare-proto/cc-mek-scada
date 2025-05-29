@@ -39,3 +39,7 @@ stack traceback:
 2025-05-29 16:02:11 [INF] BOOTING supervisor.startup v1.7.0
 2025-05-29 16:02:11 [INF] ========================================
 2025-05-29 16:02:11 [WRN] PPM: mount_all() -> no devices found
+2025-05-29 16:07:59 [INF] ========================================
+2025-05-29 16:07:59 [INF] BOOTING supervisor.startup v1.7.0
+2025-05-29 16:07:59 [INF] ========================================
+2025-05-29 16:07:59 [WRN] PPM: mount_all() -> no devices found

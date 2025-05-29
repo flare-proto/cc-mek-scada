@@ -16,6 +16,7 @@ local util       = require("scada-common.util")
 local core       = require("graphics.core")
 
 local databus    = require("supervisor.databus")
+
 local renderer   = require("test.renderer")
 
 
@@ -72,7 +73,7 @@ local function main()
     databus.tx_hw_modem(true)
 
     -- start UI
-    local fp_ok, message = renderer.try_start_ui(2, 1)
+    local fp_ok, message = renderer.try_start_ui(1, 1)
 
     if not fp_ok then
         println_ts(util.c("UI error: ", message))
@@ -98,7 +99,24 @@ local function main()
     while true do
         local event, param1, param2, param3, param4, param5 = util.pull_event()
 
-        if event == "mouse_click" or event == "mouse_up" or event == "mouse_drag" or event == "mouse_scroll" or
+        -- handle event
+        if event == "timer" and loop_clock.is_clock(param1) then
+            -- main loop tick
+
+            if heartbeat_toggle then databus.heartbeat() end
+            heartbeat_toggle = not heartbeat_toggle
+
+            -- iterate sessions
+            
+
+            loop_clock.start()
+        elseif event == "timer" then
+            -- a non-clock timer event, check watchdogs
+            
+
+            -- notify timer callback dispatcher
+            tcd.handle(param1)
+        elseif event == "mouse_click" or event == "mouse_up" or event == "mouse_drag" or event == "mouse_scroll" or
                event == "double_click" then
             -- handle a mouse event
             renderer.handle_mouse(core.events.new_mouse_event(event, param1, param2, param3))
@@ -108,7 +126,7 @@ local function main()
         if event == "terminate" or ppm.should_terminate() then
             println_ts("closing sessions...")
             log.info("terminate requested, closing sessions...")
-            --svsessions.close_all()
+            
             log.info("sessions closed")
             break
         end
